@@ -1,32 +1,58 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>MiniPolls</title><link rel="stylesheet" href="styles.css"/>
-</head><body>
-<header><h1>🗳️ MiniPolls</h1></header>
-<main class="container">
-  <section class="card">
-    <h2>Create a Poll</h2>
-    <label>Question <input id="q" type="text" placeholder="Tea or Coffee?"/></label>
-    <label>Options (comma-separated) <input id="opts" type="text" placeholder="Tea,Coffee"/></label>
-    <button id="createBtn">Create Poll</button>
-    <p id="createMsg" class="msg"></p>
-  </section>
-  <section class="card">
-    <h2>Load / Vote</h2>
-    <label>Poll ID <input id="pollId" type="number" placeholder="1"/></label>
-    <button id="loadBtn">Load Poll</button>
-    <div id="pollArea" class="hidden">
-      <h3 id="pollQuestion"></h3>
-      <div id="options"></div>
-    </div>
-    <p id="voteMsg" class="msg"></p>
-  </section>
-  <section class="card">
-    <h2>Results</h2>
-    <button id="refreshResultsBtn">Refresh Results</button>
-    <div id="results"></div>
-  </section>
-</main>
-<footer><small>MiniPolls — two microservices + one DB</small></footer>
-<script src="script.js"></script>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniPolls</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Project Title -->
+  <header>
+    <h1>🗳️ MiniPolls</h1>
+    <p class="subtitle">Create polls, vote, and view results in real-time</p>
+  </header>
+
+  <main class="container">
+    <!-- Create Poll -->
+    <section class="card">
+      <h2>Create a Poll</h2>
+      <label>Question:
+        <input type="text" id="q" placeholder="Your question?" required />
+      </label>
+      <label>Options (comma-separated):
+        <input type="text" id="opts" placeholder="Tea, Coffee" required />
+      </label>
+      <button id="createBtn">Create Poll</button>
+      <p id="createMsg" class="msg"></p>
+    </section>
+
+    <!-- Vote Section -->
+    <section class="card">
+      <h2>Vote</h2>
+      <label>Poll ID:
+        <input type="number" id="pollId" placeholder="Poll ID" />
+      </label>
+      <button id="loadBtn">Load Poll</button>
+      <div id="pollArea" class="hidden">
+        <h3 id="pollQuestion"></h3>
+        <div id="options"></div>
+      </div>
+      <p id="voteMsg" class="msg"></p>
+    </section>
+
+    <!-- Results Section -->
+    <section class="card">
+      <h2>Results</h2>
+      <button id="refreshResultsBtn">Refresh Results</button>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>MiniPolls — powered by Node, FastAPI & PostgreSQL</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
