@@ -1,18 +1,23 @@
-# MiniPolls — Two Microservices + PostgreSQL (Docker & Kubernetes)
+🗳️ MiniPolls
+MiniPolls is a simple cloud-native demo app built with two microservices and a PostgreSQL database, deployed on Kubernetes (Minikube).
+It demonstrates:
+* Microservice architecture
+* REST APIs for communication
+* Independent scaling of services
+* Persistent database storage
+* External access via NodePort frontend
 
-MiniPolls lets users create polls, vote, and view results.
+✨ Features
+* Create polls with multiple options
+* Vote on polls
+* View real-time results (counts + percentages)
+* Health endpoints for readiness checks
+* Horizontal scaling of services
+* Postgres PVC for persistence
 
-## Services
-- **poll-service** (Node/Express) — create polls, fetch, vote (port 8080)
-- **results-service** (FastAPI) — aggregate results (port 8081)
-- **frontend** (Nginx) — static UI + reverse proxy (port 80 / NodePort 30080)
-- **postgres** — stores polls/options/votes
-
-## Run (Docker Compose)
-docker compose up --build
-# UI: http://localhost:8082
-
-## Run (Kubernetes / Minikube)
-minikube start --driver=docker --memory=3000 --cpus=2
-kubectl apply -f k8s/
-minikube service frontend -n minipolls
+📦 Tech Stack
+* Frontend: Nginx + static HTML/CSS/JS
+* Poll Service: Node.js + Express + pg
+* Results Service: Python + FastAPI + asyncpg
+* Database: PostgreSQL with PersistentVolumeClaim
+* Orchestration: Docker, Kubernetes (Minikube)
