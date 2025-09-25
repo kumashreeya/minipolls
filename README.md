@@ -33,14 +33,14 @@ Repository Structure
 * docker-compose.yml
 
 Run Locally (Docker Compose)
-docker compose up --build -d
-Open: http://localhost:8082
+* docker compose up --build -d
+* Open: http://localhost:8082
 
 Run on Kubernetes (Minikube)
-minikube start --driver=docker --memory=3000 --cpus=2
-kubectl apply -f k8s/
-kubectl get pods -n minipolls
-minikube service frontend -n minipolls
+* minikube start --driver=docker --memory=3000 --cpus=2
+* kubectl apply -f k8s/
+* kubectl get pods -n minipolls
+* minikube service frontend -n minipolls
 
 Example API Usage
 1.Create a poll
