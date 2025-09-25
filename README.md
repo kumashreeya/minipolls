@@ -1,5 +1,6 @@
 🗳️ MiniPolls :
 MiniPolls is a simple cloud-native demo app built with two microservices and a PostgreSQL database, deployed on Kubernetes (Minikube).
+
 It demonstrates:
 * Microservice architecture
 * REST APIs for communication
@@ -43,6 +44,7 @@ Run on Kubernetes (Minikube)
 * minikube service frontend -n minipolls
 
 Example API Usage
+
 1.Create a poll
 curl -X POST "$URL/api/v1/polls" \
   -H 'content-type: application/json' \
