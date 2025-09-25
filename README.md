@@ -23,14 +23,14 @@ Tech Stack
 * Orchestration: Docker, Kubernetes (Minikube)
 
 Repository Structure
-frontend/ → UI with Nginx + HTML/JS/CSS
-poll-service/ → Node.js microservice
-results-service/ → FastAPI microservice
-k8s/ → Kubernetes manifests
-README.md
-SECURITY.md
-ARCHITECTURE.md
-docker-compose.yml
+* frontend/ → UI with Nginx + HTML/JS/CSS
+* poll-service/ → Node.js microservice
+* results-service/ → FastAPI microservice
+* k8s/ → Kubernetes manifests
+* README.md
+* SECURITY.md
+* ARCHITECTURE.md
+* docker-compose.yml
 
 Run Locally (Docker Compose)
 docker compose up --build -d
