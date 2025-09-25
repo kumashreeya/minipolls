@@ -21,3 +21,9 @@ Tech Stack
 * Results Service: Python + FastAPI + asyncpg
 * Database: PostgreSQL with PersistentVolumeClaim
 * Orchestration: Docker, Kubernetes (Minikube)
+
+Security
+* Database credentials stored in Kubernetes Secret
+* Only frontend exposed externally (NodePort); backend services are internal (ClusterIP)
+* Health endpoints included for monitoring
+* Future: Ingress + TLS, RBAC, NetworkPolicies
