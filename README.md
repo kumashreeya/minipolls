@@ -63,3 +63,7 @@ Security
 * Only frontend exposed externally (NodePort); backend services are internal (ClusterIP)
 * Health endpoints included for monitoring
 * Future: Ingress + TLS, RBAC, NetworkPolicies
+
+Architecture Diagram 
+<img width="516" height="657" alt="Screenshot 2025-09-25 at 9 24 47 PM" src="https://github.com/user-attachments/assets/902f469a-82ff-4d57-99a9-898ed5658118" />
+
